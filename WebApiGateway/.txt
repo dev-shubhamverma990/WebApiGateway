@@ -1,0 +1,10 @@
+﻿
+
+Adding DB into .Net Core 
+Step1: 
+PM>Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Vidyah;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Tables tblUserAuth,tblUserLogin,tblException_Log,tblInterface_Log -Force
+ Step2:
+ PM> Add-Migration Vidyah_V2_Migration
+ Step3:
+ PM> update-Database Vidyah_V2_Migration
+ Step4: 

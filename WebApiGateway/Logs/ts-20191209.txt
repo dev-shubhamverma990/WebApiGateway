@@ -1,0 +1,450 @@
+2019-12-09T10:53:43.4850853+05:30 0HLRSCVQH724E:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T10:53:43.4850853+05:30 0HLRSCVQH724F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T10:53:43.6781911+05:30 0HLRSCVQH724E:00000001 [INF] Request finished in 202.7078ms 200  (791a596a)
+2019-12-09T10:53:44.8720838+05:30 0HLRSCVQH724F:00000001 [INF] Request finished in 1375.985ms 404  (791a596a)
+2019-12-09T11:06:37.4983128+05:30 0HLRSCVQH724G:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:06:37.5887979+05:30 0HLRSCVQH724G:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:06:38.5075385+05:30 0HLRSCVQH724G:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:06:42.2711147+05:30 0HLRSCVQH724G:00000001 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 10:54:42) (2968f3ac)
+2019-12-09T11:07:01.6114045+05:30 0HLRSCVQH724G:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:07:06.0133622+05:30 0HLRSCVQH724G:00000001 [INF] Executed DbCommand ("150"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:07:12.4642384+05:30 0HLRSCVQH724G:00000001 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:07:54.5618898+05:30 0HLRSCVQH724G:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:08:01.4595577+05:30 0HLRSCVQH724G:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:08:25.1894506+05:30 0HLRSCVQH724G:00000001 [INF] Executed DbCommand ("79"ms) [Parameters=["@__username_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"DisplayName\", a.\"FatherEmail\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\"
+FROM \"tblStudentRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-09T11:08:35.9008146+05:30 0HLRSCVQH724G:00000001 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzMpdp7WFXR8XHhyI1SM-9c3O-MI-1T0gfhu8SCkICKf9Iw2E0xNoAe_SRJVQA-rCbX6r_dWi_L_mKJozBzC1btoNSxI5U_7MVfEHyX0VTQ8poB97Sk8rCoMvxcX-QlTSqwrg;Student") generated successfully (dd527e6d)
+2019-12-09T11:08:38.0031357+05:30 0HLRSCVQH724G:00000001 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 119473.6487ms. (50a9e262)
+2019-12-09T11:08:38.0251002+05:30 0HLRSCVQH724G:00000001 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:08:38.0583909+05:30 0HLRSCVQH724G:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 120442.6407ms (afa2e885)
+2019-12-09T11:08:38.0654895+05:30 0HLRSCVQH724G:00000001 [INF] Request finished in 120564.7686ms 200 text/json (791a596a)
+2019-12-09T11:09:40.0494304+05:30 0HLRSCVQH724H:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:09:40.0722210+05:30 0HLRSCVQH724H:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:09:40.0826166+05:30 0HLRSCVQH724H:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:09:40.0877884+05:30 0HLRSCVQH724H:00000001 [INF] Username ("sanag190003"), Password("princetonhive@123") have been passed on datetime(12/09/2019 10:57:40) (2968f3ac)
+2019-12-09T11:09:40.1030906+05:30 0HLRSCVQH724H:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:09:40.1227592+05:30 0HLRSCVQH724H:00000001 [INF] Executed DbCommand ("14"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:09:40.1363683+05:30 0HLRSCVQH724H:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:09:40.1394373+05:30 0HLRSCVQH724H:00000001 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 54.1021ms. (50a9e262)
+2019-12-09T11:09:40.1436797+05:30 0HLRSCVQH724H:00000001 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:09:40.1481593+05:30 0HLRSCVQH724H:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 72.3694ms (afa2e885)
+2019-12-09T11:09:40.1703610+05:30 0HLRSCVQH724H:00000001 [INF] Request finished in 107.5851ms 400 text/json (791a596a)
+2019-12-09T11:10:35.0356110+05:30 0HLRSCVQH724H:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:10:35.0391368+05:30 0HLRSCVQH724H:00000002 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:10:35.0428673+05:30 0HLRSCVQH724H:00000002 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:10:36.3766073+05:30 0HLRSCVQH724H:00000002 [INF] Username ("sanag190003"), Password("princetonhive@123") have been passed on datetime(12/09/2019 10:58:36) (2968f3ac)
+2019-12-09T11:10:37.2609937+05:30 0HLRSCVQH724H:00000002 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:10:37.2753271+05:30 0HLRSCVQH724H:00000002 [INF] Executed DbCommand ("8"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:10:37.2848302+05:30 0HLRSCVQH724H:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:10:42.1853724+05:30 0HLRSCVQH724H:00000002 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 7126.4608ms. (50a9e262)
+2019-12-09T11:10:42.2034947+05:30 0HLRSCVQH724H:00000002 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:10:42.2133717+05:30 0HLRSCVQH724H:00000002 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 7164.2673ms (afa2e885)
+2019-12-09T11:10:42.2268771+05:30 0HLRSCVQH724H:00000002 [INF] Request finished in 7180.5979ms 400 text/json (791a596a)
+2019-12-09T11:12:15.4208922+05:30 0HLRSCVQH724I:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:12:15.4292429+05:30 0HLRSCVQH724I:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:12:17.4391141+05:30 0HLRSCVQH724I:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:12:18.7590646+05:30 0HLRSCVQH724I:00000001 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:00:18) (2968f3ac)
+2019-12-09T11:12:18.7645742+05:30 0HLRSCVQH724I:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:12:18.7799979+05:30 0HLRSCVQH724I:00000001 [INF] Executed DbCommand ("12"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:12:18.7983521+05:30 0HLRSCVQH724I:00000001 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:12:18.8041251+05:30 0HLRSCVQH724I:00000001 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 1359.5046ms. (50a9e262)
+2019-12-09T11:12:18.8232500+05:30 0HLRSCVQH724I:00000001 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:12:18.8360432+05:30 0HLRSCVQH724I:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 3393.8636ms (afa2e885)
+2019-12-09T11:12:18.8483829+05:30 0HLRSCVQH724I:00000001 [INF] Request finished in 3418.9134ms 400 text/json (791a596a)
+2019-12-09T11:12:50.6623499+05:30 0HLRSCVQH724I:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:12:50.6676553+05:30 0HLRSCVQH724I:00000002 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:12:50.6741313+05:30 0HLRSCVQH724I:00000002 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:12:51.6386425+05:30 0HLRSCVQH724I:00000002 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:00:51) (2968f3ac)
+2019-12-09T11:12:52.5921684+05:30 0HLRSCVQH724I:00000002 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:12:52.6132992+05:30 0HLRSCVQH724I:00000002 [INF] Executed DbCommand ("15"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:12:52.6245748+05:30 0HLRSCVQH724I:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:13:02.5808193+05:30 0HLRSCVQH724I:00000002 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 11903.6959ms. (50a9e262)
+2019-12-09T11:13:02.5871674+05:30 0HLRSCVQH724I:00000002 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:13:02.5937029+05:30 0HLRSCVQH724I:00000002 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 11919.7341ms (afa2e885)
+2019-12-09T11:13:02.6023193+05:30 0HLRSCVQH724I:00000002 [INF] Request finished in 11943.714ms 400 text/json (791a596a)
+2019-12-09T11:13:25.2525860+05:30 0HLRSCVQH724I:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:13:25.2562124+05:30 0HLRSCVQH724I:00000003 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:13:49.6192837+05:30 0HLRSCVQH724I:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:13:50.8044313+05:30 0HLRSCVQH724I:00000003 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:01:50) (2968f3ac)
+2019-12-09T11:13:52.9650864+05:30 0HLRSCVQH724I:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:13:52.9789474+05:30 0HLRSCVQH724I:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:13:52.9915846+05:30 0HLRSCVQH724I:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:14:03.2682364+05:30 0HLRSCVQH724I:00000003 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 13639.898ms. (50a9e262)
+2019-12-09T11:14:03.2811152+05:30 0HLRSCVQH724I:00000003 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:14:03.2861053+05:30 0HLRSCVQH724I:00000003 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 38025.2143ms (afa2e885)
+2019-12-09T11:14:03.3429300+05:30 0HLRSCVQH724I:00000003 [INF] Request finished in 38043.841ms 400 text/json (791a596a)
+2019-12-09T11:14:52.2755405+05:30 0HLRSCVQH724I:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:14:52.2868562+05:30 0HLRSCVQH724I:00000004 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:14:52.2906316+05:30 0HLRSCVQH724I:00000004 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:14:54.4986473+05:30 0HLRSCVQH724I:00000004 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:02:54) (2968f3ac)
+2019-12-09T11:14:58.8301960+05:30 0HLRSCVQH724I:00000004 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:15:10.0047918+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:15:13.7467187+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("31"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:15:24.6411077+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("16"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:16:15.5551597+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:16:15.5725143+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:16:15.5816444+05:30 0HLRSCVQH724I:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"DisplayName\", a.\"FatherEmail\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\"
+FROM \"tblStudentRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-09T11:16:15.5845632+05:30 0HLRSCVQH724I:00000004 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzMpdp7WFXR8XHhyI1SM-9c3O-MI-1T0gfhu8SCkICKf9Iw2E0xNoAe_SRJVQA-rCbX6r_dWi_L_mKJozBzC1btoNS2IpU77sVdFHyV01nW8poBqq6--Jve04wn8urmeXL7_Q;Student") generated successfully (dd527e6d)
+2019-12-09T11:16:15.5870337+05:30 0HLRSCVQH724I:00000004 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 83294.009ms. (50a9e262)
+2019-12-09T11:16:15.5905391+05:30 0HLRSCVQH724I:00000004 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:16:15.5957848+05:30 0HLRSCVQH724I:00000004 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 83304.2445ms (afa2e885)
+2019-12-09T11:16:15.6008367+05:30 0HLRSCVQH724I:00000004 [INF] Request finished in 83328.0973ms 200 text/json (791a596a)
+2019-12-09T11:16:55.6970262+05:30 0HLRSCVQH724I:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:16:55.6999284+05:30 0HLRSCVQH724I:00000005 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:16:55.7040524+05:30 0HLRSCVQH724I:00000005 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:16:57.0110268+05:30 0HLRSCVQH724I:00000005 [INF] Username ("sanag190003"), Password("UHJpbmNldG9uaGl2ZUAxMjM=") have been passed on datetime(12/09/2019 11:04:56) (2968f3ac)
+2019-12-09T11:16:58.0236648+05:30 0HLRSCVQH724I:00000005 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:16:58.0367090+05:30 0HLRSCVQH724I:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:16:58.0509818+05:30 0HLRSCVQH724I:00000005 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:17:02.4612612+05:30 0HLRSCVQH724I:00000005 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 6748.6134ms. (50a9e262)
+2019-12-09T11:17:02.4693685+05:30 0HLRSCVQH724I:00000005 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:17:02.4828125+05:30 0HLRSCVQH724I:00000005 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 6770.2176ms (afa2e885)
+2019-12-09T11:17:02.5381902+05:30 0HLRSCVQH724I:00000005 [INF] Request finished in 6788.4231ms 400 text/json (791a596a)
+2019-12-09T11:17:49.9000026+05:30 0HLRSCVQH724I:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:17:49.9038642+05:30 0HLRSCVQH724I:00000006 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:17:49.9143692+05:30 0HLRSCVQH724I:00000006 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:17:50.6724221+05:30 0HLRSCVQH724I:00000006 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:05:50) (2968f3ac)
+2019-12-09T11:17:50.6781866+05:30 0HLRSCVQH724I:00000006 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:17:51.5974958+05:30 0HLRSCVQH724I:00000006 [INF] Executed DbCommand ("908"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:17:51.6418709+05:30 0HLRSCVQH724I:00000006 [INF] Executed DbCommand ("15"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:17:51.6555865+05:30 0HLRSCVQH724I:00000006 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 1727.6048ms. (50a9e262)
+2019-12-09T11:17:51.7364862+05:30 0HLRSCVQH724I:00000006 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:17:51.7447022+05:30 0HLRSCVQH724I:00000006 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 1832.6919ms (afa2e885)
+2019-12-09T11:17:51.7513868+05:30 0HLRSCVQH724I:00000006 [INF] Request finished in 1848.2869ms 400 text/json (791a596a)
+2019-12-09T11:20:08.0858444+05:30 0HLRSCVQH724J:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:20:08.0883162+05:30 0HLRSCVQH724J:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:20:08.0979850+05:30 0HLRSCVQH724J:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:20:09.9554177+05:30 0HLRSCVQH724J:00000001 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:08:09) (2968f3ac)
+2019-12-09T11:20:21.2314775+05:30 0HLRSCVQH724J:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:20:30.1246514+05:30 0HLRSCVQH724J:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:20:31.5348729+05:30 0HLRSCVQH724J:00000001 [INF] Executed DbCommand ("21"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:20:44.0616512+05:30 0HLRSCVQH724J:00000001 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:20:59.8107351+05:30 0HLRSCVQH724J:00000001 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:22:08.2633674+05:30 0HLRSCVQH724J:00000001 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:41:24.1827114+05:30 0HLRSDQF3MCRT:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T11:41:24.1827117+05:30 0HLRSDQF3MCRU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T11:41:24.3382470+05:30 0HLRSDQF3MCRT:00000001 [INF] Request finished in 153.6124ms 200  (791a596a)
+2019-12-09T11:41:24.9855598+05:30 0HLRSDQF3MCRU:00000001 [INF] Request finished in 702.9423ms 404  (791a596a)
+2019-12-09T11:45:45.9593308+05:30 0HLRSDQF3MCRV:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:45:46.0452204+05:30 0HLRSDQF3MCRV:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:45:46.7997516+05:30 0HLRSDQF3MCRV:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:45:49.2528460+05:30 0HLRSDQF3MCRV:00000001 [INF] Username ("dr.mohi09"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:33:49) (2968f3ac)
+2019-12-09T11:45:50.0873694+05:30 0HLRSDQF3MCRV:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:45:52.5439231+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed DbCommand ("31"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:45:52.6070698+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed DbCommand ("14"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:45:52.8316272+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed DbCommand ("13"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:45:52.9108651+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed DbCommand ("13"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"FirstName\", a.\"DisplayName\", a.\"FatherEmail\", a.\"Class\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\", a.\"SchoolName\", a.\"SchoolLogo\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-09T11:45:52.9263625+05:30 0HLRSDQF3MCRV:00000001 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzbtpp3UAyB8Xjz140OcOxO2POJKL0N0m2xgtiIm5eAZdU3xkEHYvIc7WpHCklkuXyd6rfPWSbX9n2VoC0WCzTnpNu4IZ0k7dpaEn-avU6cmGXrAlWJHlwWzHHlj41cCg;Teacher") generated successfully (dd527e6d)
+2019-12-09T11:45:53.2019944+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 6388.0002ms. (50a9e262)
+2019-12-09T11:45:53.2625011+05:30 0HLRSDQF3MCRV:00000001 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:45:53.3723702+05:30 0HLRSDQF3MCRV:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 7225.6068ms (afa2e885)
+2019-12-09T11:45:53.4366879+05:30 0HLRSDQF3MCRV:00000001 [INF] Request finished in 7428.9301ms 200 text/json (791a596a)
+2019-12-09T11:46:13.0925994+05:30 0HLRSDQF3MCRV:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:46:13.0990080+05:30 0HLRSDQF3MCRV:00000002 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:46:13.1071095+05:30 0HLRSDQF3MCRV:00000002 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:46:14.1068444+05:30 0HLRSDQF3MCRV:00000002 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:34:14) (2968f3ac)
+2019-12-09T11:46:14.1251796+05:30 0HLRSDQF3MCRV:00000002 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:46:14.1396858+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:46:14.1584824+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed DbCommand ("13"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:46:14.1706181+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:46:14.2136037+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__username_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"DisplayName\", a.\"FatherEmail\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\"
+FROM \"tblStudentRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-09T11:46:14.2302794+05:30 0HLRSDQF3MCRV:00000002 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzMpdp7WFXR8XHhyI1SM-9c3O-MI-1T0gfhu8SCkICKf9Iw2E0xNoAe_SRJVQA-rCbX6r_dWi_L_mKJozBzC1bto9SzIpU778VZF3Sa0VW7isWHChK2j2emmRdQAgGj-CVF;Student") generated successfully (dd527e6d)
+2019-12-09T11:46:14.2339272+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 1122.8917ms. (50a9e262)
+2019-12-09T11:46:14.2487530+05:30 0HLRSDQF3MCRV:00000002 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:46:14.2572862+05:30 0HLRSDQF3MCRV:00000002 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 1150.5019ms (afa2e885)
+2019-12-09T11:46:14.2846776+05:30 0HLRSDQF3MCRV:00000002 [INF] Request finished in 1167.7049ms 200 text/json (791a596a)
+2019-12-09T11:47:23.9095199+05:30 0HLRSDQF3MCS0:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json; charset=utf-8  (ca22a1cb)
+2019-12-09T11:47:23.9138673+05:30 0HLRSDQF3MCS0:00000001 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T11:47:23.9185655+05:30 0HLRSDQF3MCS0:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T11:47:24.5781815+05:30 0HLRSDQF3MCS0:00000001 [INF] Username ("sanag190003"), Password("Princetonhive@123") have been passed on datetime(12/09/2019 11:35:24) (2968f3ac)
+2019-12-09T11:47:24.9564015+05:30 0HLRSDQF3MCS0:00000001 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T11:47:24.9702662+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-09T11:47:24.9863467+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed DbCommand ("11"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-09T11:47:25.0003339+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-09T11:47:26.7173987+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__username_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"DisplayName\", a.\"FatherEmail\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\"
+FROM \"tblStudentRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-09T11:47:29.6584469+05:30 0HLRSDQF3MCS0:00000001 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzMpdp7WFXR8XHhyI1SM-9c3O-MI-1T0gfhu8SCkICKf9Iw2E0xNoAe_SRJVQA-rCbX6r_dWi_L_mKJozBzC1bto9SzI5U478VRGnqa0FvS8poBHQCM7ZhW9kSiSVsRWjCFBw;Student") generated successfully (dd527e6d)
+2019-12-09T11:47:32.5569387+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 8635.8676ms. (50a9e262)
+2019-12-09T11:47:32.5597529+05:30 0HLRSDQF3MCS0:00000001 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-09T11:47:32.5659103+05:30 0HLRSDQF3MCS0:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 8646.2926ms (afa2e885)
+2019-12-09T11:47:32.5718332+05:30 0HLRSDQF3MCS0:00000001 [INF] Request finished in 8662.8275ms 200 text/json (791a596a)
+2019-12-09T17:02:39.5835662+05:30 0HLRSJDVJVK95:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:02:39.5835662+05:30 0HLRSJDVJVK94:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:02:39.7088543+05:30 0HLRSJDVJVK95:00000001 [INF] Request finished in 131.4284ms 200  (791a596a)
+2019-12-09T17:02:40.2111649+05:30 0HLRSJDVJVK94:00000001 [INF] Request finished in 637.9824ms 404  (791a596a)
+2019-12-09T17:06:17.3622629+05:30 0HLRSJDVJVK96:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:06:17.5820381+05:30 0HLRSJDVJVK96:00000001 [INF] Request finished in 219.2842ms 200 text/html (791a596a)
+2019-12-09T17:06:17.8734793+05:30 0HLRSJDVJVK96:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:06:18.2416917+05:30 0HLRSJDVJVK96:00000002 [INF] Request finished in 387.4417ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:06:47.3616570+05:30 0HLRSJDVJVK96:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:06:47.4661267+05:30 0HLRSJDVJVK96:00000003 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:06:47.8831045+05:30 0HLRSJDVJVK96:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:07:21.0890038+05:30 0HLRSJDVJVK96:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:07:26.0617085+05:30 0HLRSJDVJVK96:00000003 [INF] Executed DbCommand ("15"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)
+2019-12-09T17:07:26.2031402+05:30 0HLRSJDVJVK96:00000003 [ERR] An exception occurred in the database while iterating the results of a query for context type '"WebApiGateway.Entities.PrincetonhiveContext"'."
+""System.InvalidOperationException: An exception occurred while reading a database value for property 'TblRegistration.State'. The expected type was 'System.Int32' but the actual value was null. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.TryReadValue[TValue](ValueBuffer& valueBuffer, Int32 index, IPropertyBase property)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.TryReadValue[TValue](ValueBuffer& valueBuffer, Int32 index, IPropertyBase property)
+   at lambda_method(Closure , QueryContext , ValueBuffer )
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ProjectionShaper.TypedProjectionShaper`3.Shape(QueryContext queryContext, ValueBuffer& valueBuffer)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded) in /home/roji/projects/EFCore.PG/src/EFCore.PG/Storage/Internal/NpgsqlExecutionStrategy.cs:line 51
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()" (64e2593c)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'TblRegistration.State'. The expected type was 'System.Int32' but the actual value was null. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.TryReadValue[TValue](ValueBuffer& valueBuffer, Int32 index, IPropertyBase property)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.TryReadValue[TValue](ValueBuffer& valueBuffer, Int32 index, IPropertyBase property)
+   at lambda_method(Closure , QueryContext , ValueBuffer )
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ProjectionShaper.TypedProjectionShaper`3.Shape(QueryContext queryContext, ValueBuffer& valueBuffer)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded) in /home/roji/projects/EFCore.PG/src/EFCore.PG/Storage/Internal/NpgsqlExecutionStrategy.cs:line 51
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2019-12-09T17:34:01.4500429+05:30 0HLRSJVGFSHAN:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:34:01.4500435+05:30 0HLRSJVGFSHAM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:34:01.5307949+05:30 0HLRSJVGFSHAN:00000001 [INF] Request finished in 102.1993ms 200  (791a596a)
+2019-12-09T17:34:01.7867824+05:30 0HLRSJVGFSHAM:00000001 [INF] Request finished in 367.363ms 404  (791a596a)
+2019-12-09T17:34:06.4701425+05:30 0HLRSJVGFSHAN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:34:06.6232258+05:30 0HLRSJVGFSHAN:00000002 [INF] Request finished in 153.6408ms 200 text/html (791a596a)
+2019-12-09T17:34:06.8552933+05:30 0HLRSJVGFSHAM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:34:07.1009618+05:30 0HLRSJVGFSHAM:00000002 [INF] Request finished in 246.1453ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:34:20.5459299+05:30 0HLRSJVGFSHAN:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:34:20.6056764+05:30 0HLRSJVGFSHAN:00000003 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:34:20.8239016+05:30 0HLRSJVGFSHAN:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:34:41.0912676+05:30 0HLRSJVGFSHAN:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:34:45.8250856+05:30 0HLRSJVGFSHAN:00000003 [INF] Executed DbCommand ("22"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)
+2019-12-09T17:36:46.0961798+05:30 0HLRSK11I6FS0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:36:46.0961803+05:30 0HLRSK11I6FS2:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:36:46.0961798+05:30 0HLRSK11I6FS1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:36:46.1543993+05:30 0HLRSK11I6FS2:00000001 [INF] Request finished in 69.8276ms 200  (791a596a)
+2019-12-09T17:36:46.5187952+05:30 0HLRSK11I6FS0:00000001 [INF] Request finished in 420.3916ms 404  (791a596a)
+2019-12-09T17:36:46.6472829+05:30 0HLRSK11I6FS1:00000001 [INF] Request finished in 566.8544ms 200 text/html (791a596a)
+2019-12-09T17:36:46.8502626+05:30 0HLRSK11I6FS2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:36:47.1697089+05:30 0HLRSK11I6FS2:00000002 [INF] Request finished in 315.7773ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:36:54.0215522+05:30 0HLRSK11I6FS0:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:36:54.0835656+05:30 0HLRSK11I6FS0:00000002 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:36:54.2825083+05:30 0HLRSK11I6FS0:00000002 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:36:57.5666718+05:30 0HLRSK11I6FS0:00000002 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:36:58.6576700+05:30 0HLRSK11I6FS0:00000002 [INF] Executed DbCommand ("20"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)
+2019-12-09T17:39:36.2390409+05:30 0HLRSK2K8R1RH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:39:36.2390409+05:30 0HLRSK2K8R1RG:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:39:36.2390412+05:30 0HLRSK2K8R1RI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:39:36.3177917+05:30 0HLRSK2K8R1RG:00000001 [INF] Request finished in 87.7881ms 200  (791a596a)
+2019-12-09T17:39:36.7878736+05:30 0HLRSK2K8R1RH:00000001 [INF] Request finished in 577.1346ms 404  (791a596a)
+2019-12-09T17:39:36.9364096+05:30 0HLRSK2K8R1RI:00000001 [INF] Request finished in 726.6923ms 200 text/html (791a596a)
+2019-12-09T17:39:37.2640422+05:30 0HLRSK2K8R1RG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:39:37.5712287+05:30 0HLRSK2K8R1RG:00000002 [INF] Request finished in 322.1085ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:39:46.1120105+05:30 0HLRSK2K8R1RH:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:39:46.1850075+05:30 0HLRSK2K8R1RH:00000002 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:39:46.4194578+05:30 0HLRSK2K8R1RH:00000002 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:39:51.7418050+05:30 0HLRSK2K8R1RH:00000002 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:39:52.9477596+05:30 0HLRSK2K8R1RH:00000002 [INF] Executed DbCommand ("16"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)
+2019-12-09T17:42:07.8962116+05:30 0HLRSK41FFR06:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:42:07.8962116+05:30 0HLRSK41FFR07:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:42:07.9733449+05:30 0HLRSK41FFR07:00000001 [INF] Request finished in 65.1702ms 200  (791a596a)
+2019-12-09T17:42:08.2340615+05:30 0HLRSK41FFR06:00000001 [INF] Request finished in 343.8878ms 404  (791a596a)
+2019-12-09T17:42:11.4528920+05:30 0HLRSK41FFR07:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:42:11.6383573+05:30 0HLRSK41FFR07:00000002 [INF] Request finished in 184.0716ms 200 text/html (791a596a)
+2019-12-09T17:42:12.4879107+05:30 0HLRSK41FFR06:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:42:12.7149997+05:30 0HLRSK41FFR06:00000002 [INF] Request finished in 225.7662ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:42:20.7299687+05:30 0HLRSK41FFR07:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:42:20.8010396+05:30 0HLRSK41FFR07:00000003 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:42:21.0045476+05:30 0HLRSK41FFR07:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:42:23.9163815+05:30 0HLRSK41FFR07:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:42:25.0072452+05:30 0HLRSK41FFR07:00000003 [INF] Executed DbCommand ("23"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)
+2019-12-09T17:46:21.0946378+05:30 0HLRSK41FFR07:00000003 [INF] Executed action "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" in 240283.9417ms (afa2e885)
+2019-12-09T17:46:21.1825172+05:30 0HLRSK41FFR07:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (Index was outside the bounds of the array.) ---> System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at WebApi.Controllers.UsersController.GetAsyncTeacherRegistration(String result) in D:\webapigateway\WebApiGateway\WebApiGateway 1.8\WebApiGateway 1.2\WebApiGateway\Controllers\UsersController.cs:line 364
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at WebApi.Controllers.UsersController.Registration_Teacher(Int32 ID) in D:\webapigateway\WebApiGateway\WebApiGateway 1.8\WebApiGateway 1.2\WebApiGateway\Controllers\UsersController.cs:line 115
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at WebApi.Controllers.UsersController.GetAsyncTeacherRegistration(String result) in D:\webapigateway\WebApiGateway\WebApiGateway 1.8\WebApiGateway 1.2\WebApiGateway\Controllers\UsersController.cs:line 364<---
+
+2019-12-09T17:46:21.2630274+05:30 0HLRSK41FFR07:00000003 [INF] Request finished in 240531.6418ms 500 text/html; charset=utf-8 (791a596a)
+2019-12-09T17:59:11.5162097+05:30 0HLRSKDIGUVC5:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-09T17:59:11.5162097+05:30 0HLRSKDIGUVC4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-09T17:59:11.5875250+05:30 0HLRSKDIGUVC5:00000001 [INF] Request finished in 73.6513ms 200  (791a596a)
+2019-12-09T17:59:11.8640435+05:30 0HLRSKDIGUVC4:00000001 [INF] Request finished in 359.7571ms 404  (791a596a)
+2019-12-09T17:59:15.2455889+05:30 0HLRSKDIGUVC5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-09T17:59:15.4531976+05:30 0HLRSKDIGUVC5:00000002 [INF] Request finished in 205.8476ms 200 text/html (791a596a)
+2019-12-09T17:59:16.4847749+05:30 0HLRSKDIGUVC4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-09T17:59:16.7122223+05:30 0HLRSKDIGUVC4:00000002 [INF] Request finished in 230.0888ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-09T17:59:24.5330753+05:30 0HLRSKDIGUVC5:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Teacher?ID=26  0 (ca22a1cb)
+2019-12-09T17:59:24.5946505+05:30 0HLRSKDIGUVC5:00000003 [INF] Route matched with "{action = \"Registration_Teacher\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Teacher(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-09T17:59:24.8143282+05:30 0HLRSKDIGUVC5:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Teacher (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-09T17:59:35.2920433+05:30 0HLRSKDIGUVC5:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-09T17:59:38.8867947+05:30 0HLRSKDIGUVC5:00000003 [INF] Executed DbCommand ("14"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"City\" AS \"Newusercity\", a.\"State\" AS \"Newuserstate\", a.\"Country\" AS \"Newusercountry\", a.\"SchoolName\" AS \"Newuserschoolname\", a.\"Address\" AS \"Newuseraddress\", a.\"PostalCode\" AS \"Newuserpostalcode\", a.\"FirstName\" AS \"Teacherfirstname\", a.\"LastName\" AS \"Teacherlastname\", a.\"DisplayName\" AS \"Teacherdisplayname\", a.\"Username\" AS \"Teacherusername\", a.\"Email\" AS \"Teacheremail\", a.\"SchoolIdBelouga\", a.\"Class\", a.\"TeacherIdBelouga\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"RegistrationId\" = @__ID_0" (0723d8ff)

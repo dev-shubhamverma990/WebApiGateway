@@ -1,0 +1,131 @@
+2019-11-26T00:07:06.7654073+05:30 0HLRHQPSIN94N:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-11-26T00:07:06.7654044+05:30 0HLRHQPSIN94O:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-11-26T00:07:06.8738507+05:30 0HLRHQPSIN94O:00000001 [INF] Request finished in 101.698ms 200  (791a596a)
+2019-11-26T00:07:07.0724400+05:30 0HLRHQPSIN94O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-11-26T00:07:07.3735238+05:30 0HLRHQPSIN94N:00000001 [INF] Request finished in 600.289ms 404  (791a596a)
+2019-11-26T00:07:07.5260219+05:30 0HLRHQPSIN94O:00000002 [INF] Request finished in 457.4301ms 200 text/html (791a596a)
+2019-11-26T00:07:08.0000646+05:30 0HLRHQPSIN94N:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-11-26T00:07:08.2512234+05:30 0HLRHQPSIN94N:00000002 [INF] Request finished in 251.4116ms 200 application/json;charset=utf-8 (791a596a)
+2019-11-26T00:08:05.7682619+05:30 0HLRHQPSIN94O:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json-patch+json 310 (ca22a1cb)
+2019-11-26T00:08:05.8318503+05:30 0HLRHQPSIN94O:00000003 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-11-26T00:08:06.0629108+05:30 0HLRHQPSIN94O:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-11-26T00:08:11.6338055+05:30 0HLRHQPSIN94O:00000003 [INF] Username ("sanss190085"), Password("Princetonhive@123") have been passed on datetime(11/25/2019 23:56:11) (2968f3ac)
+2019-11-26T00:08:15.4133613+05:30 0HLRHQPSIN94O:00000003 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-11-26T00:08:17.4785092+05:30 0HLRHQPSIN94O:00000003 [INF] Executed DbCommand ("18"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-11-26T00:08:25.4540846+05:30 0HLRHQPSIN94O:00000003 [INF] Executed DbCommand ("31"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-11-26T00:08:37.5715030+05:30 0HLRHQPSIN94O:00000003 [INF] Executed DbCommand ("12"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-11-26T00:08:42.6115228+05:30 0HLRHQPSIN94O:00000003 [INF] Executed DbCommand ("35"ms) [Parameters=["@__username_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"DisplayName\", a.\"FatherEmail\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\", b.\"Class\", b.\"SchoolName\" AS \"School\", b.\"SchoolLogo\" AS \"Logo\", b.\"SchoolEmail\"
+FROM \"tblStudentRegistration\" AS a
+INNER JOIN \"tblRegistration\" AS b ON a.\"ClassIdBelouga\" = b.\"ClassIdBelouga\"
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-11-26T00:08:46.9315253+05:30 0HLRHQPSIN94O:00000003 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzMpdppTFXR8XHpzo1SM-9c3O-MI-1T0gfhu8SCkICKf9Iw2E0xNoAe_SRJVQA-rCbX6r_dWi_L_mKJoDBwDVbsrdSxLJU57sVfEH-X317Y8poB_YWEmWCYEs2RYD1nOEgSOw;Student") generated successfully (dd527e6d)
+2019-11-26T00:08:49.6656670+05:30 0HLRHQPSIN94O:00000003 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 43593.7937ms. (50a9e262)
+2019-11-26T00:08:49.9142824+05:30 0HLRHQPSIN94O:00000003 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-11-26T00:08:50.0532809+05:30 0HLRHQPSIN94O:00000003 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 44210.3767ms (afa2e885)
+2019-11-26T00:08:50.2536773+05:30 0HLRHQPSIN94O:00000003 [INF] Request finished in 44484.507ms 200 text/json (791a596a)
+2019-11-26T00:13:04.6151706+05:30 0HLRHQPSIN94P:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Registration_Student?ID=91  0 (ca22a1cb)
+2019-11-26T00:13:04.6226618+05:30 0HLRHQPSIN94P:00000001 [INF] Route matched with "{action = \"Registration_Student\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Registration_Student(Int32)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-11-26T00:13:04.6361622+05:30 0HLRHQPSIN94P:00000001 [INF] Executing action method "WebApi.Controllers.UsersController.Registration_Student (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-11-26T00:13:09.4295486+05:30 0HLRHQPSIN94P:00000001 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-11-26T00:13:10.2377267+05:30 0HLRHQPSIN94P:00000001 [INF] Executed DbCommand ("93"ms) [Parameters=["@__ID_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Type\", a.\"FirstName\", a.\"LastName\", a.\"Username\", a.\"ClassIdBelouga\" AS \"Class\"
+FROM \"tblStudentRegistration\" AS a
+WHERE a.\"StudentRegistrationId\" = @__ID_0" (0723d8ff)
+2019-11-26T00:14:24.1905594+05:30 0HLRHQPSIN94P:00000001 [INF] Executed action "WebApi.Controllers.UsersController.Registration_Student (WebApiGateway)" in 79564.8323ms (afa2e885)
+2019-11-26T00:14:24.4772092+05:30 0HLRHQPSIN94P:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Npgsql.PostgresException (0x80004005): 42703: column y.Class does not exist
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in /home/roji/projects/npgsql/src/Npgsql/NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlDataReader.cs:line 444
+   at Npgsql.NpgsqlDataReader.NextResult() in /home/roji/projects/npgsql/src/Npgsql/NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlCommand.cs:line 1219
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlCommand.cs:line 1130
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded) in /home/roji/projects/EFCore.PG/src/EFCore.PG/Storage/Internal/NpgsqlExecutionStrategy.cs:line 51
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at WebApi.Controllers.UsersController.Registration_Student(Int32 ID) in D:\vidyah\WebApiGateway\WebApiGateway 1.7\WebApiGateway 1.2\WebApiGateway\Controllers\UsersController.cs:line 196
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-26T00:14:24.8318966+05:30 0HLRHQPSIN94P:00000001 [INF] Request finished in 80215.0939ms 500 text/html; charset=utf-8 (791a596a)
+2019-11-26T11:03:52.1269340+05:30 0HLRI68S7RKN3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-11-26T11:03:52.1268851+05:30 0HLRI68S7RKN4:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-11-26T11:03:52.3428101+05:30 0HLRI68S7RKN4:00000001 [INF] Request finished in 229.4326ms 200  (791a596a)
+2019-11-26T11:03:53.0340408+05:30 0HLRI68S7RKN3:00000001 [INF] Request finished in 924.8262ms 404  (791a596a)
+2019-11-26T12:37:44.3320072+05:30 0HLRI7TAQRUSN:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-11-26T12:37:44.3320393+05:30 0HLRI7TAQRUSO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-11-26T12:37:44.3858680+05:30 0HLRI7TAQRUSN:00000001 [INF] Request finished in 49.5975ms 200  (791a596a)
+2019-11-26T12:37:44.5617078+05:30 0HLRI7TAQRUSO:00000001 [INF] Request finished in 239.0401ms 404  (791a596a)
+2019-11-26T12:37:46.7969171+05:30 0HLRI7TAQRUSN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-11-26T12:37:46.7996713+05:30 0HLRI7TAQRUSN:00000002 [INF] Request finished in 4.4138ms 404  (791a596a)
+2019-11-26T12:37:48.1704443+05:30 0HLRI7TAQRUSO:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-11-26T12:37:48.3122438+05:30 0HLRI7TAQRUSO:00000002 [INF] Request finished in 141.8347ms 200 text/html (791a596a)
+2019-11-26T12:37:49.1427712+05:30 0HLRI7TAQRUSN:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-11-26T12:37:49.2551974+05:30 0HLRI7TAQRUSN:00000003 [INF] Request finished in 111.9185ms 200 application/json;charset=utf-8 (791a596a)
+2019-11-26T12:38:04.3676788+05:30 0HLRI7TAQRUSO:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json-patch+json 299 (ca22a1cb)
+2019-11-26T12:38:04.4148255+05:30 0HLRI7TAQRUSO:00000003 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-11-26T12:38:04.7875099+05:30 0HLRI7TAQRUSO:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-11-26T12:38:06.5014097+05:30 0HLRI7TAQRUSO:00000003 [INF] Username ("yogesh123"), Password("password") have been passed on datetime(11/26/2019 12:26:06) (2968f3ac)
+2019-11-26T12:38:07.1371546+05:30 0HLRI7TAQRUSO:00000003 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-11-26T12:38:07.8632649+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed DbCommand ("18"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-11-26T12:38:07.8924645+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-11-26T12:38:08.0385313+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed DbCommand ("11"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-11-26T12:38:08.0660928+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"FirstName\", a.\"DisplayName\", a.\"FatherEmail\", a.\"Class\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\", a.\"SchoolName\", a.\"SchoolLogo\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-11-26T12:38:08.0743229+05:30 0HLRI7TAQRUSO:00000003 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzGq9N_TAzZ83Lz140OcOxO2POJKL0N0k2imMWckZGLKcBykkE_I-IV7SVbGRUx-G-K-rKrWCjA93eCoSpsAzvord22LfUopiIdX1Epy0-j83Gsg3DowB4;Teacher") generated successfully (dd527e6d)
+2019-11-26T12:38:08.1970897+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 3403.8557ms. (50a9e262)
+2019-11-26T12:38:08.2047186+05:30 0HLRI7TAQRUSO:00000003 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-11-26T12:38:08.2144385+05:30 0HLRI7TAQRUSO:00000003 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 3792.9205ms (afa2e885)
+2019-11-26T12:38:08.2172071+05:30 0HLRI7TAQRUSO:00000003 [INF] Request finished in 3850.2099ms 200 text/json (791a596a)

@@ -1,0 +1,36 @@
+2019-12-10T14:53:45.4998928+05:30 0HLRTAAJTU916:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:52778/api/values   (ca22a1cb)
+2019-12-10T14:53:45.4998927+05:30 0HLRTAAJTU917:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52778/  0 (ca22a1cb)
+2019-12-10T14:53:45.5732149+05:30 0HLRTAAJTU917:00000001 [INF] Request finished in 73.7192ms 200  (791a596a)
+2019-12-10T14:53:45.8383646+05:30 0HLRTAAJTU916:00000001 [INF] Request finished in 354.6396ms 404  (791a596a)
+2019-12-10T14:53:49.2230338+05:30 0HLRTAAJTU917:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/index.html   (ca22a1cb)
+2019-12-10T14:53:49.3884359+05:30 0HLRTAAJTU917:00000002 [INF] Request finished in 165.7815ms 200 text/html (791a596a)
+2019-12-10T14:53:49.9674110+05:30 0HLRTAAJTU916:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:52778/swagger/v1/swagger.json   (ca22a1cb)
+2019-12-10T14:53:50.1753975+05:30 0HLRTAAJTU916:00000002 [INF] Request finished in 208.6034ms 200 application/json;charset=utf-8 (791a596a)
+2019-12-10T14:54:18.0420051+05:30 0HLRTAAJTU917:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:52778/Users/Authenticate application/json-patch+json 299 (ca22a1cb)
+2019-12-10T14:54:18.1037504+05:30 0HLRTAAJTU917:00000003 [INF] Route matched with "{action = \"Authenticate\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Authenticate(WebApi.Entities.User)" on controller "WebApi.Controllers.UsersController" ("WebApiGateway"). (122b2fdf)
+2019-12-10T14:54:18.5000543+05:30 0HLRTAAJTU917:00000003 [INF] Executing action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" - Validation state: Valid (dad538d7)
+2019-12-10T14:54:22.3865911+05:30 0HLRTAAJTU917:00000003 [INF] Username ("yogesh123"), Password("password") have been passed on datetime(12/10/2019 14:42:22) (2968f3ac)
+2019-12-10T14:54:22.9984032+05:30 0HLRTAAJTU917:00000003 [INF] Entity Framework Core "2.1.14-servicing-32113" initialized '"PrincetonhiveContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None" (9958f5bb)
+2019-12-10T14:54:24.1360066+05:30 0HLRTAAJTU917:00000003 [INF] Executed DbCommand ("20"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserName\"
+FROM \"UserLogin\" AS a
+WHERE a.\"UserName\" = @__username_0" (0723d8ff)
+2019-12-10T14:54:24.1790968+05:30 0HLRTAAJTU917:00000003 [INF] Executed DbCommand ("11"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"Password\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)" (0723d8ff)
+2019-12-10T14:54:24.3964501+05:30 0HLRTAAJTU917:00000003 [INF] Executed DbCommand ("11"ms) [Parameters=["@__username_0='?' (Size = 500), @__Encrypt_1='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"UserRole\"
+FROM \"UserLogin\" AS a
+WHERE (a.\"UserName\" = @__username_0) AND (a.\"Password\" = @__Encrypt_1)
+LIMIT 2" (0723d8ff)
+2019-12-10T14:54:24.4621537+05:30 0HLRTAAJTU917:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@__username_0='?' (Size = 500)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.\"FirstName\", a.\"DisplayName\", a.\"FatherEmail\", a.\"Class\", a.\"FatherMobile\", a.\"SchoolCode\", a.\"Type\", a.\"Email\", a.\"SchoolName\", a.\"SchoolLogo\"
+FROM \"tblRegistration\" AS a
+WHERE a.\"Username\" = @__username_0
+LIMIT 2" (0723d8ff)
+2019-12-10T14:54:24.4755750+05:30 0HLRTAAJTU917:00000003 [INF] Token("v2.local.ENG98mfmCWo7p8qEha5nuyv4lP5y8248CH52s2ties_VQW7BUKjlX8_k_FYLORU7zFpRLeFM-261tVD2gRYTIcIjfMBOMbELwVkF6iuWen0gJw08dokV14ndhBG1xe7gZNzGq9N_TAzZ83Lz140OcOxO2POJKL0N0k2imMWckZGLKcBykkE_I-IV7SVbGRUx-GyK-bSrWCbA9XuCoylsCjrupNmzTo130E0uTfj8ia9UmjdECtLE3g;Teacher") generated successfully (dd527e6d)
+2019-12-10T14:54:24.6522524+05:30 0HLRTAAJTU917:00000003 [INF] Executed action method "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)", returned result "Microsoft.AspNetCore.Mvc.ContentResult" in 6144.6313ms. (50a9e262)
+2019-12-10T14:54:24.6639569+05:30 0HLRTAAJTU917:00000003 [INF] Executing ContentResult with HTTP Response ContentType of "text/json" (7ec2a4e9)
+2019-12-10T14:54:24.6804105+05:30 0HLRTAAJTU917:00000003 [INF] Executed action "WebApi.Controllers.UsersController.Authenticate (WebApiGateway)" in 6565.0147ms (afa2e885)
+2019-12-10T14:54:24.6852515+05:30 0HLRTAAJTU917:00000003 [INF] Request finished in 6642.1287ms 200 text/json (791a596a)
